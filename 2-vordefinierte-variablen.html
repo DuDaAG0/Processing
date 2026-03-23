@@ -1,85 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Processing in der Schule</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
     <script src="sketch1.js"></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Processing</h1>
 
-    <h2>3. Vordefinierte Variablen</h2>
+    <h2>2. Vordefinierte Variablen</h2>
 
     <div class="task">
-    <h3>ÜBUNGSAUFGABEN</h3>  
-    <h3>1.1 Kreis mit Spur <span class="level">Level 1</span></h3>
-    <p>
-    Erstelle ein Fenster der Größe 800 x 800 Pixel mit einem weißen Hintergrund. 
-    Zeichne nun einen Kreis (Befehl: circle) an der Stelle, wo sich der Mauszeiger befindet. 
-    Verwende dafür <strong>mouseX</strong> und <strong>mouseY</strong>.
-    </p>
-    <div id="sketch1" class="interactive-field"></div>
+      <h3>ÜBUNGSAUFGABEN</h3>
 
-    <h3>1.2 Radiergummi <span class="level">Level 1</span></h3>
-    <p>
-    Schreiben Sie ein Programm, wo ein schwarzes Quadrat in der Mitte steht und die Maus als Radiergummi(Durchmesser 15).
-    </p>
-    <div id="sketch_radiergummi" class="interactive-field"></div>
-    <p>Hinweis: Der Befehl noStroke() entfernt die schwarze Umrandung.</p>
+      <details>
+        <summary>2.1 Kreis mit Spur <span class="level">Level 1</span></summary>
+        <p>
+          Erstelle ein Fenster der Größe 800 x 800 Pixel mit einem weißen
+          Hintergrund. Zeichne nun einen Kreis an der Stelle, wo sich der
+          Mauszeiger befindet. Verwende dafür die vordefinierten Variablen
+          <strong>mouseX</strong> und <strong>mouseY</strong>.
+        </p>
+        <h4>Interaktive Fläche:</h4>
+        <div id="sketch1" class="interactive-field"></div>
+      </details>
 
-    <h3>1.3 Kreis ohne Spur <span class="level">Level 2</span></h3>
-    
-    <p>
-    Wenn wir die Illusion erwecken wollen, dass der Kreis sich bewegt und nicht immer neu gezeichnet wird, 
-    müssen wir den Hintergrund immer neu befüllen und somit den "alten" Kreis (aus dem vorigen draw()-Aufruf) übermalen.
-    </p>
+      <details>
+        <summary>2.2 Radiergummi <span class="level">Level 1</span></summary>
+        <p>
+          Schreibe ein ein Programm, bei welchem der Hintergrund schwarz ist und
+          die Maus mit einem Kreis (Durchmesser 15) als Radiergummifunktioniert.
+        </p>
+        <h4>Interaktive Fläche:</h4>
+        <div id="sketch_radiergummi" class="interactive-field"></div>
+        <p>
+          <br />Tipp:<br />
+          Der Befehl <strong>noStroke();</strong> entfernt die schwarze
+          Umrandung des Kreises.
+        </p>
+      </details>
 
-    <div id="sketch2" class="interactive-field"></div>
+      <details>
+        <summary>
+          2.3 Kreis ohne Spur <span class="level">Level 2</span>
+        </summary>
+        <p>
+          Wir wollen die Illusion erwecken, dass sich der Kreis bewegt und nicht
+          immer neu gezeichnet wird. Dazu müssen wir den Hintergrund immer neu
+          befüllen und somit den "alten" Kreis (aus dem vorigen draw()-Aufruf)
+          übermalen. Programmiere folgendes Programm:
+        </p>
+        <h4>Interaktive Fläche:</h4>
+        <div id="sketch2" class="interactive-field"></div>
+      </details>
 
-    <h3>1.4 Kreis mit Farbverlauf <span class="level">Level 2</span></h3>
-    <p>
-    Versuche die Farbe deines Ovals abhängig von der Mausposition zu ändern. 
-    Dies kannst du machen, indem du <strong>mouseX</strong> und <strong>mouseY</strong> im <strong>fill</strong>-Befehl verwendest. 
-    Die Farben müssen jedoch nicht genau diesem Beispiel entsprechen.
-    </p>
-    <h4>Interaktives Feld:</h4>
-    <div id="sketch3"  class="interactive-field"></div>
+      <details>
+        <summary>
+          2.4 Kreis mit Farbverlauf <span class="level">Level 2</span>
+        </summary>
+        <p>
+          Wir wollen die Farbe des Kreis abhängig von der Mausposition zu
+          ändern. Dies kannst du machen, indem du <strong>mouseX</strong> und
+          <strong>mouseY</strong> im <strong>fill</strong>-Befehl verwendest.
+          Die Farben müssen nicht genau diesem Beispiel entsprechen.
+        </p>
+        <h4>Interaktives Feld:</h4>
+        <div id="sketch3" class="interactive-field"></div>
+      </details>
 
-    <h3>1.5 Interaktive Linie <span class="level">Level 2</span></h3>
+      <details>
+        <summary>
+          2.5 Interaktive Linie <span class="level">Level 2</span>
+        </summary>
+        <p>
+          Programmiere eine Linie, bei der ein Endpunkt immer der Maus folgt.
+        </p>
+        <h4>Interaktives Feld:</h4>
+        <div id="sketch4" class="interactive-field"></div>
+      </details>
 
-    <p>
-    Programmiere eine Linie, bei der ein Endpunkt immer der Maus folgt.
-    </p>
-    
-    <div id="sketch4"  class="interactive-field"></div>
+      <details>
+        <summary>2.6 Rechteck-Quiz <span class="level">Level 3</span></summary>
+        <p>Welchem Prinzip folgt das Rechteck in dem interaktiven Feld?</p>
+        <h4>Interaktives Feld:</h4>
+        <div id="sketch_rechteck" class="interactive-field"></div>
+        <p>Finde es heraus und programmiere es nach.</p>
+      </details>
 
-    <h3>1.3 Rechteck-Quiz <span class="level">Level 3</span></h3>
-    <p>
-    Welchem Prinzip folgt das Rechteck in dem interaktiven Feld? 
-    </p>
-    <div id="sketch_rechteck"  class="interactive-field"></div>
-    <p>
-    Finde es heraus und programmiere es nach.
-    </p>
-    <h3>1.4 Fadenkreuz <span class="level">Level 3</span></h3>
-    <p>
-    Zeichne zwei Linien, die parallel zur x- bzw. y-Achse sind und immer der Maus folgen. Der Schnittpunkt liegt genau auf dem Mauszeiger. 
-    </p>
-
-    <div id="sketch_fadenkreuz"  class="interactive-field"></div>
-    <p>
-    Programmiert am besten zunächst nur eine der beiden Linien, dann ist es leichter , die zweite hinzuzufügen. 
-    </p>
-
-
+      <details>
+        <summary>2.7 Fadenkreuz <span class="level">Level 3</span></summary>
+        <p>
+          Zeichne zwei Linien, die parallel zur x- bzw. y-Achse sind und immer
+          der Maus folgen. Der Schnittpunkt liegt genau auf dem Mauszeiger.
+        </p>
+        <h4>Interaktives Feld:</h4>
+        <div id="sketch_fadenkreuz" class="interactive-field"></div>
+        <p>
+          Programmiert am besten zunächst nur eine der beiden Linien, dann ist
+          es leichter ,die zweite hinzuzufügen.
+        </p>
+      </details>
     </div>
-
-
-</body>
-
-
-</body>
+  </body>
 </html>
