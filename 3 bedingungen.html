@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Processing in der Schule</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script src="sketch2.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+  </head>
+  <body>
+    <h1>Processing</h1>
+    <h2>3. Bedingungen</h2>
+
+    <div class="task">
+      <h3>ÜBUNGSAUFGABEN</h3>
+
+      <details>
+        <summary>
+          3.1 Leuchtender Kreis <span class="level">Level 1</span>
+        </summary>
+
+        <p>
+          Folgendes Programm erzeugt einen Mauszeiger in Form eines roten
+          Kreises.
+        </p>
+
+        <div class="code-container">
+          <pre><code class="language-java">
+void draw() {
+    background(255); 
+    fill(255, 0, 0); 
+    circle(mouseX, mouseY, 20, 20);
+}
+          </code></pre>
+        </div>
+        <p>
+          Verändere das Programm derart, dass in der rechten Bildschirmhälfte
+          der Mauszeiger ein grüner Kreis wird und in der linken wieder rot.
+        </p>
+        <h4>Interaktive Fläche:</h4>
+        <div id="sketch_leuchtender_kreis" class="interactive-field"></div>
+      </details>
+
+      <details>
+        <summary>
+          3.2 Mauszeiger mit Formen <span class="level">Level 1</span>
+        </summary>
+        <p>
+          Folgendes Programm erzeugt einen weißen Kreis, der sich mit dem
+          Mauszeiger bewegt.
+        </p>
+
+        <div class="code-container">
+          <pre><code class="language-java">
+void draw() {
+    background(255);
+    circle(mouseX, mouseY, 20, 20);
+}
+          </code></pre>
+        </div>
+        <p>
+          Verändere das Programm derart, dass in der unteren Bildschirmhälfte
+          der Mauszeiger zur gefüllten, schwarzen Box wird und in der oberen
+          wieder zum Kreis.
+        </p>
+        <h4>Interaktive Fläche:</h4>
+        <div id="sketch_mauszeiger_formen" class="interactive-field"></div>
+      </details>
+
+      <details>
+        <summary>
+          3.3 Verschiedene Formen <span class="level">Level 1</span>
+        </summary>
+
+        <p>
+          Verwende die Variable <code>key</code>, um verschiedene Formen zu
+          zeichnen.
+        </p>
+
+        <div class="code-container">
+          <pre><code class="language-java">
+if(key == 'e'){
+    ...
+}
+          </code></pre>
+        </div>
+
+        <p><strong>Dein Programm soll Folgendes ausführen:</strong></p>
+
+        <p>
+          <b>1.</b> Wenn die Taste r gedrückt ist, dann zeichne einen roten
+          Kreis
+        </p>
+        <img src="images/image_roter_kreis.png" width="250" />
+
+        <p>
+          <b>2.</b> Wenn die Taste r gedrückt ist, dann zeichne ein blaues
+          Quadrat.
+        </p>
+        <img src="images/image_blaues_quadrat.png" width="250" />
+
+        <p>
+          <b>3.</b> Wenn die Taste g gedrückt ist, dann zeichne ein grünes
+          Dreieck
+        </p>
+        <img src="images/grünes_dreieck.png" width="250" />
+
+        <p>
+          <b>4.</b> Wenn die Taste x gedrückt ist, dann lösche alle bisherigen
+          Formen (Befehl background).
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          3.4 Zeichenprogramm <span class="level">Level 2</span>
+        </summary>
+
+        <p>
+          In dieser Aufgabe soll ein Zeichenprogramm mit verschiedenen Farben
+          erstellt werden. Starte mit folgender Grundstruktur:
+        </p>
+
+        <div class="code-container">
+          <pre><code class="language-java">
+void setup() {
+  size(800, 800);
+  fill(0, 0, 0);
+}
+void draw() {
+  // Dein Code
+}
+          </code></pre>
+        </div>
+
+        <h4>Aufgabe</h4>
+
+        <p>
+          1. Es werden nur noch Kreise gezeichnet, wenn die Maustaste gedrückt
+          ist (mousePressed).<br />
+          2. Mit den Keyboard-Tasten wird gewählt, in welcher Farbe als nächstes
+          gezeichnet wird (key). <br />
+        </p>
+        <ul>
+          Taste
+          <b>r</b
+          >: rot
+          <br />
+          Taste
+          <b>b</b
+          >: blau
+          <br />
+          Taste
+          <b>g</b
+          >: grün
+          <br /><br />
+        </ul>
+
+        <p>
+          <b>Tipp:</b> Mit <code>noStroke();</code> werden keine schwarzen
+          Umrandungen mehr angezeigt.
+        </p>
+        <h4>Interaktive Fläche:</h4>
+        <div id="zeichenprogramm" class="interactive-field"></div>
+      </details>
+
+      <details>
+        <summary>3.5 Zusatzaufgabe <span class="level">Level 3</span></summary>
+
+        <p>
+          Finde heraus, wie sich die Form und Farbe des Mauszeigers in der
+          interaktiven Fläche verändert.
+        </p>
+        <h4>Interaktive Fläche:</h4>
+        <div
+          id="sketch_mauszeiger_formen_farbe"
+          class="interactive-field"
+        ></div>
+
+        <p>Schreibe ein Programm mit der gleichen Ausgabe.</p>
+
+        <p>
+          <b>Tipp:</b>Wenn zwei Bedingungen gleichzeitig gelten kann man mit
+          <code>&&</code> (= UND) zwei Bedingungen verbinden:
+        </p>
+
+        <div class="code-container">
+          <pre><code class="language-java">
+if(xMouse < 100 && yMouse < 100){
+...
+}
+          </code></pre>
+        </div>
+      </details>
+    </div>
+  </body>
+</html>
