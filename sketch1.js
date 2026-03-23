@@ -47,6 +47,7 @@ new p5((p) => {
   };
   p.draw = function() {
     p.background(255);
+    p.fill (0, 0, p.mouseX);
     p.rect(0,0, p.mouseY, p.mouseY);
   };
 }, "sketch_rechteck");
