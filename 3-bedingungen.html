@@ -17,7 +17,7 @@
   </head>
   <body>
     <h1>Processing</h1>
-    <h2>3. Bedingungen</h2>
+    <h2>3. Einfache Bedingungen</h2>
 
     <div class="task">
       <h3>ÜBUNGSAUFGABEN</h3>
@@ -34,6 +34,10 @@
 
         <div class="code-container">
           <pre><code class="language-java">
+void setup(){
+  size(300, 300);
+}
+
 void draw() {
     background(255); 
     fill(255, 0, 0); 
@@ -54,22 +58,9 @@ void draw() {
           3.2 Mauszeiger mit Formen <span class="level">Level 1</span>
         </summary>
         <p>
-          Folgendes Programm erzeugt einen weißen Kreis, der sich mit dem
-          Mauszeiger bewegt.
-        </p>
-
-        <div class="code-container">
-          <pre><code class="language-java">
-void draw() {
-    background(255);
-    circle(mouseX, mouseY, 20, 20);
-}
-          </code></pre>
-        </div>
-        <p>
-          Verändere das Programm derart, dass in der unteren Bildschirmhälfte
-          der Mauszeiger zur gefüllten, schwarzen Box wird und in der oberen
-          wieder zum Kreis.
+          Verändere das Programm aus Aufgabe 3.1 derart, dass in der unteren
+          Bildschirmhälfte der Mauszeiger zur grünen Box wird und in der oberen
+          wieder zum roten Kreis.
         </p>
         <h4>Interaktive Fläche:</h4>
         <div id="sketch_mauszeiger_formen" class="interactive-field"></div>
@@ -87,8 +78,11 @@ void draw() {
 
         <div class="code-container">
           <pre><code class="language-java">
-if(key == 'e'){
+if(key == 'r'){
     ...
+}
+if(key == 'b'){
+
 }
           </code></pre>
         </div>
@@ -102,7 +96,7 @@ if(key == 'e'){
         <img src="images/image_roter_kreis.png" width="250" />
 
         <p>
-          <b>2.</b> Wenn die Taste r gedrückt ist, dann zeichne ein blaues
+          <b>2.</b> Wenn die Taste b gedrückt ist, dann zeichne ein blaues
           Quadrat.
         </p>
         <img src="images/image_blaues_quadrat.png" width="250" />
@@ -133,7 +127,7 @@ if(key == 'e'){
           <pre><code class="language-java">
 void setup() {
   size(800, 800);
-  fill(0, 0, 0);
+  background(0);
 }
 void draw() {
   // Dein Code

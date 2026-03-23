@@ -26,9 +26,11 @@ new p5((p) => {
   p.draw = function() {
     p.background(255);
     if (p.mouseY > 150){
+      p.fill(255, 0, 0);
       p.rect(p.mouseX, p.mouseY, 20,20)
     }
     else {
+      p.fill(0, 255, 0);
       p.circle(p.mouseX, p.mouseY, 20);
     }
   };
