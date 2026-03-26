@@ -74,3 +74,14 @@ new p5((p) => {
     p.noStroke();
   };
 }, "sketch_radiergummi");
+
+new p5((p) => {
+  p.setup = function() {
+    p.createCanvas(300, 300);
+  };
+  p.draw = function() {
+    p.background(255);
+    p.fill (0, 0, 255 - p.mouseX);
+    p.rect(300 - p.mouseX,300 - p.mouseY, 100, 100);
+  };
+}, "sketch_rechteck2");
