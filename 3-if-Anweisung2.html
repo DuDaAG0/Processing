@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Processing in der Schule</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script src="sketch3.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+  </head>
+  <body>
+    <h1>Processing</h1>
+    <h2>3. if- Anweisungen Fortsetzung</h2>
+
+    <div class="task">
+      <h3>ÜBUNGSAUFGABEN</h3>
+
+      <details>
+        <summary>
+          3.9 Verschiedene Formen <span class="level">Level 1</span>
+        </summary>
+        <p>
+          Dein Programm soll bestimmte Formen zeichnen, wenn bestimmte Tasten
+          gedrückt werden.
+        </p>
+        <p>Starte mit folgender Grundstruktur:</p>
+
+        <div class="code-container">
+          <pre><code class="language-java">
+void setup() {
+  size(400, 400);
+  background(0);
+}
+void draw() {
+  // Dein Code
+}
+          </code></pre>
+        </div>
+        <p><strong>Dein Programm soll Folgendes ausführen:</strong></p>
+
+        <p>
+          <b>1.</b> Wenn die Taste r gedrückt ist, dann zeichne einen roten
+          Kreis
+        </p>
+        <img src="images/image_roter_kreis.png" width="250" />
+
+        <p>
+          <b>2.</b> Wenn die Taste b gedrückt ist, dann zeichne ein blaues
+          Quadrat.
+        </p>
+        <img src="images/image_blaues_quadrat.png" width="250" />
+
+        <p>
+          <b>4.</b> Wenn die Taste x gedrückt ist, dann lösche alle bisherigen
+          Formen (Befehl background).
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          3.10 Zeichenprogramm <span class="level">Level 1</span>
+        </summary>
+
+        <p>
+          In dieser Aufgabe soll ein Zeichenprogramm mit verschiedenen Farben
+          erstellt werden. Starte wieder mit folgender Grundstruktur:
+        </p>
+
+        <div class="code-container">
+          <pre><code class="language-java">
+void setup() {
+  size(400, 400);
+  background(0);
+}
+void draw() {
+  // Dein Code
+}
+          </code></pre>
+        </div>
+
+        <h4>Schritte:</h4>
+
+        <p>
+          <b>1.</b> Zeichne Kreise mit Durchmesser 15, die dem Mauszeiger
+          folgen.
+          <br />
+          <b>2.</b> Lass die Kreise nur noch dann zeichnen, wenn die Maustaste
+          gedrückt ist (mousePressed).<br />
+          <b>3.</b> Ändere die Farbe der Kreise, wenn die entsprechende Taste
+          gedrückt wird:<br />
+        </p>
+        <ul>
+          Taste
+          <b>r</b
+          >: rot
+          <br />
+          Taste
+          <b>b</b
+          >: blau
+          <br />
+          Taste
+          <b>g</b
+          >: grün
+          <br /><br />
+        </ul>
+        <p>
+          <b>4.</b> Wenn die Taste x gedrückt ist, dann lösche alle bisherigen
+          Formen. <b>5.</b> Ergänze eine zusätzliche Farbe.
+        </p>
+
+        <h4>Interaktive Fläche:</h4>
+        <div id="zeichenprogramm" class="interactive-field size-big"></div>
+
+        <p>
+          <b>Tipp:</b> Mit <code>noStroke();</code> werden keine schwarzen
+          Umrandungen mehr angezeigt.
+        </p>
+      </details>
+
+      <!-- 3.11 -->
+      <details>
+        <summary>
+          3.11 Zeichenprogramm Advanced <span class="level">Level 2</span>
+        </summary>
+
+        <p>Erweitere dein Zeichenprogramm.</p>
+
+        <ul>
+          <li>Das Fenster soll doppelt so breit wie hoch sein (800 × 400).</li>
+          <li>In der linken Hälfte wird mit einem Kreis gezeichnet.</li>
+          <li>In der rechten Hälfte wird mit einem Rechteck gezeichnet.</li>
+        </ul>
+
+        <h4>Interaktive Fläche:</h4>
+        <div
+          id="sketch_zeichenprogramm_advanced"
+          class="interactive-field size-wide"
+        ></div>
+      </details>
+
+      <!-- 3.12 -->
+      <details>
+        <summary>
+          3.12 Zeichnenprogramm Synchron <span class="level">Level 3</span>
+        </summary>
+
+        <p>Ändere dein Programm aus Aufgabe 3.11:</p>
+
+        <ul>
+          <li>
+            Wenn du in der linken Hälfte Kreise zeichnest, soll gleichzeitig
+            auch in der rechten Hälfte Quadrate gezeichnet werden.
+          </li>
+          <li>
+            Wenn du in der rechten Hälfte Quadrate zeichnest, soll ebenfalls
+            links Kreise mitgezeichnet werden.
+          </li>
+        </ul>
+
+        <h4>Interaktive Fläche:</h4>
+        <div
+          id="sketch_synchrones_zeichnen"
+          class="interactive-field size-wide"
+        ></div>
+      </details>
+
+      <!-- 3.13 -->
+      <details>
+        <summary>
+          3.13 Zeichenprogramm achsengespiegelt
+          <span class="level">Level 4</span>
+        </summary>
+
+        <p>Ändere dein Programm aus Aufgabe 3.12 weiter:</p>
+
+        <p>
+          Alles, was links mit Kreisen gezeichnet wird, soll auch rechts
+          gespiegelt mit Quadraten erscheinen und umgekehrt.
+        </p>
+
+        <h4>Interaktive Fläche:</h4>
+        <div
+          id="sketch_achsenspiegelung"
+          class="interactive-field size-wide"
+        ></div>
+        <p>
+          <b>Tipp:</b> Arbeite mit <code>mouseX</code> und überlege, wie du die
+          x-Position spiegeln kannst. Die Größe des Fensters ist dir bekannt.
+        </p>
+      </details>
+
+      <!-- 3.14 -->
+      <details>
+        <summary>
+          3.14 Zeichenprogramm punktgespiegelt<span class="level">
+            Level 4</span
+          >
+        </summary>
+
+        <p>Ändere dein Programm aus Aufgabe 3.13:</p>
+
+        <ul>
+          <li>Das Fenster soll quadratisch sein (800 × 800).</li>
+          <li>
+            Auf der linken Hälfte werden Kreise und auf der rechten Hälfte
+            Rechtecke gezeichnet.
+          </li>
+          <li>
+            Die Zeichnung soll an der mittigen horizontalen Linie gespiegelt
+            werden.
+          </li>
+          <li>
+            Die Zeichnung soll zusätzlich an der mittigen vertikalen Linie
+            gespiegelt werden.
+          </li>
+          <li>Die Zeichnung soll außerdem am Mittelpunkt gespiegelt werden.</li>
+        </ul>
+
+        <h4>Interaktive Fläche:</h4>
+        <div
+          id="sketch_punktspiegelung"
+          class="interactive-field size-big"
+        ></div>
+      </details>
+    </div>
+  </body>
+</html>

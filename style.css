@@ -57,6 +57,26 @@ h2 {
     border-radius: 1px;
     background-color: #ffffff;
 }
+/* Varianten */
+.size-small {
+    width: 300px;
+    height: 300px;
+}
+
+.size-wide {
+    width: 800px;
+    height: 400px;
+}
+
+.size-tall {
+    width: 400px;
+    height: 800px;
+}
+
+.size-big {
+    width: 400px;
+    height: 400px;
+}
 
 /* Container */
 .code-container {
@@ -124,4 +144,14 @@ font-size: 18px;
 .task-card:hover {
   background-color: #dbeeff;
   transform: translateY(-2px);
+}
+ul, ol {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 4px;
 }
